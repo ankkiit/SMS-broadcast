@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SMS Status</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+	
+	<div class="status-container">
+		<h1>SMS Status Report</h1>
+		   <!-- <h2>Pending SMS</h2>  -->
+		   
+		<p>Pending SMS Count: <span th:text="${pendingSMSCount}"></span></p>
+		    <p>Sent SMS Count: <span th:text="${sentSMSCount}"></span></p>
+			<p>DND Message Count: <span th:text="${dndcount}"></span></p>
+			<form id="viewbutton" action="/home" method="get">
+				      <button type="submit" class="button">Home</button>
+				  </form>
+		
+	</div>
+
+   
+	
+		
+		<!--
+			<table border="1">
+			        <tr>
+			            <th>Phone Number</th>
+			            <th>Message</th>
+			        </tr>
+			        <tr th:each="sms : ${pendingSMS}">
+			            <td th:text="${sms.phoneNumber}"></td>
+			            <td th:text="${sms.message}"></td>
+			        </tr>
+			    </table>
+		-->
+    
+<!--
+	<h2>Sent SMS</h2>
+	    <table border="1">
+	        <tr>
+	            <th>Phone Number</th>
+	            <th>Message</th>
+	        </tr>
+	        <tr th:each="sms : ${sentSMS}">
+	            <td th:text="${sms.phoneNumber}"></td>
+	            <td th:text="${sms.message}"></td>
+	        </tr>
+	    </table>	
+-->
+    
+	
+    
+</body>
+</html>

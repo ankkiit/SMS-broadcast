@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SMS Broadcast</title>
+	<link rel="stylesheet" href="/css/login.css">
+
+</head>
+<style>
+	#schedule-options {
+		display: none;
+
+	}
+</style>
+
+
+<body>
+	<div class="container">
+		<h1>Welcome to SMS Broadcast</h1>
+
+		<div class="options">
+			<div class="modall" id="smsModal">
+				<div class="modal-content">
+
+					<form th:action="@{/sendall}" method="post" enctype="multipart/form-data">
+
+
+						<!-- File Upload Option -->
+						<label for="fileUpload">Upload File:</label>
+						<input type="file" id="fileUpload" name="fileUpload" accept=".txt,.csv">
+						<br>
+
+						<h3>Enter Message</h3>
+
+
+						<textarea id="message" name="message" placeholder="Enter message here" required></textarea>
+						<br>
+						<label for="campaign">Select Campaign:</label>
+						<select itemtype="text" id="campaign" name="campaign" required>
+							<option value="" disabled selected>Select Campaign</option>
+							<option value="Promotional">Promotional</option>
+							<option value="Transactional">Transactional</option>
+							<option value="Reminder">Reminder</option>
+							<option value="Feedback">Feedback</option>
+							<option value="Event Notification">Event Notification</option>
+							<option value="Customer Engagement">Customer Engagement</option>
+						</select>
+						<br>
+
+
+
+						<div id="schedule-options">
+							<label for="scheduleDate">Choose a date:</label>
+							<input type="date" id="scheduleDate" name="scheduleDate">
+
+							<label for="scheduleTime">Choose a time:</label>
+							<input type="time" id="scheduleTime" name="scheduleTime">
+
+						</div>
+						<div class="buttonn-group">
+							<button type="button" id="scheduleButton" class="buttonn">Schedule</button>
+							
+
+								<button type="submit" class="buttonn">Send SMS</button>
+							</div>
+
+					</form>
+				
+			</div>
+</div>
+
+
+		</div>
+
+	</div>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			document.getElementById('scheduleButton').addEventListener('click', function () {
+				var scheduleOptions = document.getElementById('schedule-options');
+				// Toggle visibility
+				if (scheduleOptions.style.display === 'none' || scheduleOptions.style.display === '') {
+					scheduleOptions.style.display = 'block'; // Show options
+				} else {
+					scheduleOptions.style.display = 'none'; // Hide options
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>

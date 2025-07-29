@@ -1,0 +1,238 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	text-align: center;
+	margin-top: 5px;
+}
+
+h1 {
+	color: #333;
+	padding: 20px;
+	border: 2px solid #007BFF;
+	/* Border color */
+	border-radius: 20px;
+	/* Rounded corners */
+	background-color: #e9f5ff;
+	/* Light background color */
+	display: inline-block;
+	/* Fit the border to the text */
+
+}
+
+.options {
+	margin-top: 100px;
+}
+
+.button {
+	display: inline-block;
+	margin: 10px;
+	padding: 15px 25px;
+	font-size: 16px;
+	color: white;
+	background-color: #007BFF;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+}
+
+.button:hover {
+	background-color: #0056b3;
+}
+
+
+
+
+
+
+#send-sms {
+	display: none;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+
+}
+
+
+#send-sms form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 80%;
+	max-width: 600px;
+}
+
+#send-sms label {
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+
+
+input[type="tel"],
+textarea,
+input[type="date"],
+input[type="time"] {
+	width: 100%;
+	padding: 10px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.buttonn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+	display: inline-block;
+	text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+	margin-left: 30px;
+}
+
+
+
+
+.button-group {
+           display: flex;
+           justify-content: space-between;
+           margin-top: 10px;
+       }
+
+       .button-group .buttonn {
+           width: 48%; /* Ensure both buttons take up nearly half the space */
+       }
+
+	   /* Style for the label */
+	   label {
+	       font-weight: bold;
+	       margin-bottom: 8px;
+	       display: block; /* Makes the label occupy full width */
+	       color: #333; /* Dark gray color */
+	   }
+
+	   /* Style for the select element */
+	   select {
+	       width: 100%; /* Full width */
+	       padding: 10px; /* Padding for better spacing */
+	       margin-bottom: 15px; /* Space below the select */
+	       border: 1px solid #ccc; /* Light gray border */
+	       border-radius: 5px; /* Rounded corners */
+	       font-size: 16px; /* Font size */
+	       background-color: #fff; /* White background */
+	       color: #333; /* Text color */
+	       transition: border-color 0.3s; /* Smooth transition for border color */
+	   }
+
+	   /* Change border color on focus */
+	   select:focus {
+	       border-color: #007bff; /* Change border to a blue color */
+	       outline: none; /* Remove default outline */
+	   }
+
+
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+.buttonn:hover {
+    background-color: #218838;
+}
+
+.card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+	        margin: 0 auto;
+            display: inline-block;
+            width: 100%;
+            max-width: 500px;
+        }
+		
+		#schedule-options {
+			display: none;
+		}
+
+		.modal {
+		    display: none; /* Hidden by default */
+		    position: fixed; /* Stay in place */
+		    z-index: 1; /* Sit on top */
+		    left: 0;
+		    top: 0;
+			float: right;
+			cursor: pointer;
+		    width: 100%; /* Full width */
+		    height: 100%; /* Full height */
+		    overflow: auto; /* Enable scroll if needed */
+		    background-color: rgb(0,0,0); /* Fallback color */
+		    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		}
+		.close:hover,
+		.close:focus {
+		    color: red;
+		    text-decoration: none;
+		    cursor: pointer; /* Ensure cursor is a pointer */
+		}
+		
+	
+
+
+		
+		.modal-content {
+		    background-color: #fefefe;
+		    margin: 15% auto; /* 15% from the top and centered */
+		    padding: 20px;
+		    border: 1px solid #888;
+		    width: 80%; /* Could be more or less, depending on screen size */
+		}
+		
+		.status-container {
+			text-align: center;
+		           background-color: white;
+		           padding: 30px;
+		           border-radius: 10px;
+		           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		          /* max-width: 500px;*/
+		           width: 100%;
+		       }
+		
+		
+		
+		
+		
+/*
+#toggleFormButton {
+	margin-bottom: 20px;
+}
+
+#viewbutton{
+	margin-top: 20px;
+}
+*/
